@@ -43,12 +43,10 @@ public class DashActivity extends Activity {
 
 
     protected final static int getResourceID(final String resName, final String resType, final Context ctx) {
-        System.out.println("Getting resource id");
         final int ResourceID = ctx.getResources().getIdentifier(resName, resType, ctx.getApplicationInfo().packageName);
         if (ResourceID == 0) {
             throw new IllegalArgumentException("No resource string found with name " + resName);
         } else {
-            System.out.println("Returning resource id "+ResourceID);
             return ResourceID;
         }
     }
